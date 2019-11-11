@@ -1,4 +1,6 @@
-# starter-snake-node(js)
+# Tyke
+
+_The **Ty**pescript Sna**ke**_
 
 A simple [Battlesnake AI](https://battlesnake.io) written in Javascript for NodeJS.
 
