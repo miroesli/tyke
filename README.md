@@ -2,23 +2,19 @@
 
 _The **Ty**pescript Sna**ke**_
 
-A simple [Battlesnake AI](https://battlesnake.io) written in Javascript for NodeJS.
-
-To get started you'll need a working NodeJS development environment, and at least read the Heroku docs on [deploying a NodeJS app](https://devcenter.heroku.com/articles/getting-started-with-nodejs).
+A simple [Battlesnake AI](https://battlesnake.io) written in Typescript for NodeJS.
 
 If you haven't setup a NodeJS development environment before, read [how to get started with NodeJS](http://nodejs.org/documentation/tutorials/). You'll also need [npm](https://www.npmjs.com/) for easy JS dependency management.
 
 This client uses [Express4](http://expressjs.com/en/4x/api.html) for easy route management, read up on the docs to learn more about reading incoming JSON params, writing responses, etc.
-
-[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
 ## Running the AI locally
 
 Fork and clone this repo:
 
 ```shell
-git clone git@github.com:battlesnakeio/starter-snake-node.git
-cd battlesnake-node
+git clone git@github.com:miroesli/tyke.git
+cd tyke
 ```
 
 Install the client dependencies:
@@ -37,42 +33,20 @@ npm start
 
 Test the client in your browser at <http://localhost:5000>
 
-## Deploying to Heroku
+## Running the Engine locally
 
-Click the Deploy to Heroku button at the top or use the command line commands below.
-
-Create a new NodeJS Heroku app:
+Change your current directory to the battlesnake-engine folder:
 
 ```shell
-heroku create [APP_NAME]
+cd battlesnake-engine
 ```
 
-Push code to Heroku servers:
+Run the engine in dev mode:
 
 ```shell
-git push heroku master
+./engine dev
 ```
 
-Open Heroku app in browser:
+Open a browser and go to http://localhost:3010/
 
-```shell
-heroku open
-```
-
-Or go directly via <http://APP_NAME.herokuapp.com>
-
-View/stream server logs:
-
-```shell
-heroku logs --tail
-```
-
-## Deploying to [Zeit](https://zeit.co/)
-
-Install the now cli and sign up for a [zeit account](https://zeit.co/docs/v1/getting-started/introduction-to-now/).
-
-Deploying is simply:
-
-```shell
-now
-```
+This will give you a web based environment to run the snake locally.
