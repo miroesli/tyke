@@ -17,8 +17,8 @@ This client uses [Express4](http://expressjs.com/en/4x/api.html) for easy route 
 Fork and clone this repo:
 
 ```shell
-git clone git@github.com:battlesnakeio/starter-snake-node.git
-cd battlesnake-node
+git clone git@github.com:miroesli/tyke.git
+cd tyke
 ```
 
 Install the client dependencies:
@@ -36,6 +36,24 @@ npm start
 ```
 
 Test the client in your browser at <http://localhost:5000>
+
+## Running the Engine locally
+
+Change your current directory to the battlesnake-engine folder:
+
+```shell
+cd battlesnake-engine
+```
+
+Run the engine in dev mode:
+
+```shell
+./engine dev
+```
+
+Open a browser and go to http://localhost:3010/
+
+This will give you a web based environment to run the snake locally.
 
 ## Deploying to Heroku
 
