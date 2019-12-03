@@ -1,7 +1,7 @@
 {
-  "name": "starter-snake-node",
-  "description": "NodeJS starter snake",
-  "repository": "http://github.com/battlesnakeio/starter-snake-node",
+  "name": "tyke",
+  "description": "Typescript snake",
+  "repository": "http://github.com/miroesli/tyke",
   "logo": "http://node-js-sample.herokuapp.com/node.svg",
   "keywords": []
 }
