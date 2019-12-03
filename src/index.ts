@@ -22,7 +22,7 @@ app.use(poweredByHandler);
 // --- SNAKE LOGIC GOES BELOW THIS LINE ---
 
 // Handle POST request to '/start'
-app.post("/start", (request, response) => {
+app.post("/start", (_request, response) => {
   // NOTE: Do something here to start the game
 
   // Response data
@@ -34,7 +34,7 @@ app.post("/start", (request, response) => {
 });
 
 // Handle POST request to '/move'
-app.post("/move", (request, response) => {
+app.post("/move", (_request, response) => {
   // NOTE: Do something here to generate your move
 
   // Response data
@@ -45,12 +45,12 @@ app.post("/move", (request, response) => {
   return response.json(data);
 });
 
-app.post("/end", (request, response) => {
+app.post("/end", (_request, response) => {
   // NOTE: Any cleanup when a game is complete.
   return response.json({});
 });
 
-app.post("/ping", (request, response) => {
+app.post("/ping", (_request, response) => {
   // Used for checking if this snake is still alive.
   return response.json({});
 });

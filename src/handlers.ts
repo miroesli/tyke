@@ -3,12 +3,12 @@
  * focus on writing your snake logic in index.js endpoints.
  */
 
-export const poweredByHandler = (req, res, next) => {
+export const poweredByHandler = (_req: any, res: any, next: any) => {
   res.setHeader("X-Powered-By", "Battlesnake");
   next();
 };
 
-export const fallbackHandler = (req, res, next) => {
+export const fallbackHandler = (req: any, res: any, next: any) => {
   console.dir(req.baseUrl);
   // Root URL path
   if (req.baseUrl === "") {
@@ -36,7 +36,7 @@ export const fallbackHandler = (req, res, next) => {
   return next(err);
 };
 
-export const notFoundHandler = (err, req, res, next) => {
+export const notFoundHandler = (err: any, _req: any, res: any, next: any) => {
   if (err.status !== 404) {
     return next(err);
   }
@@ -48,7 +48,12 @@ export const notFoundHandler = (err, req, res, next) => {
   });
 };
 
-export const genericErrorHandler = (err, req, res, next) => {
+export const genericErrorHandler = (
+  err: any,
+  _req: any,
+  res: any,
+  _next: any
+) => {
   const statusCode = err.status || 500;
 
   res.status(statusCode);

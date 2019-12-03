@@ -4,7 +4,7 @@
  * focus on writing your snake logic in index.js endpoints.
  */
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.poweredByHandler = function (req, res, next) {
+exports.poweredByHandler = function (_req, res, next) {
     res.setHeader("X-Powered-By", "Battlesnake");
     next();
 };
@@ -29,7 +29,7 @@ exports.fallbackHandler = function (req, res, next) {
     res.status(404);
     return next(err);
 };
-exports.notFoundHandler = function (err, req, res, next) {
+exports.notFoundHandler = function (err, _req, res, next) {
     if (err.status !== 404) {
         return next(err);
     }
@@ -39,7 +39,7 @@ exports.notFoundHandler = function (err, req, res, next) {
         error: err.message || "These are not the snakes you're looking for"
     });
 };
-exports.genericErrorHandler = function (err, req, res, next) {
+exports.genericErrorHandler = function (err, _req, res, _next) {
     var statusCode = err.status || 500;
     res.status(statusCode);
     return res.send({
