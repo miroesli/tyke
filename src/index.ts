@@ -1,13 +1,13 @@
-const bodyParser = require("body-parser");
-const express = require("express");
-const logger = require("morgan");
-const app = express();
+import bodyParser = require("body-parser");
+import express = require("express");
+import logger = require("morgan");
 import {
   fallbackHandler,
   notFoundHandler,
   genericErrorHandler,
   poweredByHandler
 } from "./handlers";
+const app = express();
 
 // For deployment to Heroku, the port needs to be set using ENV, so
 // we check for the port number in process.env
